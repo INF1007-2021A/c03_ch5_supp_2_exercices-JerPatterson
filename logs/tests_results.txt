@@ -1,0 +1,48 @@
+test_format_histogram (__main__.TestExercice) ... ERROR
+test_format_horizontal_histogram (__main__.TestExercice) ... FAIL
+test_get_num_letters (__main__.TestExercice) ... ok
+test_get_word_length_histogram (__main__.TestExercice) ... FAIL
+
+======================================================================
+ERROR: test_format_histogram (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\patte\OneDrive\Documents\Polytechnique\Intro à la programmation\Exercices\c03_ch5_supp_2_exercices-JerPatterson\test_exercice.py", line 68, in test_format_histogram
+    output = [exercice.format_histogram(exercice.get_word_length_histogram(v)).strip("\n") for v in values]
+  File "c:\Users\patte\OneDrive\Documents\Polytechnique\Intro à la programmation\Exercices\c03_ch5_supp_2_exercices-JerPatterson\test_exercice.py", line 68, in <listcomp>
+    output = [exercice.format_histogram(exercice.get_word_length_histogram(v)).strip("\n") for v in values]
+AttributeError: 'NoneType' object has no attribute 'strip'
+
+======================================================================
+FAIL: test_format_horizontal_histogram (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\patte\OneDrive\Documents\Polytechnique\Intro à la programmation\Exercices\c03_ch5_supp_2_exercices-JerPatterson\test_exercice.py", line 86, in test_format_horizontal_histogram
+    self.is_same_formatting(out, exp)
+  File "c:\Users\patte\OneDrive\Documents\Polytechnique\Intro à la programmation\Exercices\c03_ch5_supp_2_exercices-JerPatterson\test_exercice.py", line 91, in is_same_formatting
+    self.assertEqual(
+AssertionError: 1 != 4 : Pas même nombre de lignes
+
+======================================================================
+FAIL: test_get_word_length_histogram (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\patte\OneDrive\Documents\Polytechnique\Intro à la programmation\Exercices\c03_ch5_supp_2_exercices-JerPatterson\test_exercice.py", line 45, in test_get_word_length_histogram
+    self.assertListEqual(
+AssertionError: Lists differ: [[0, 1, 2, 1]] != [[0, 1, 0, 1, 1]]
+
+First differing element 0:
+[0, 1, 2, 1]
+[0, 1, 0, 1, 1]
+
+- [[0, 1, 2, 1]]
+?         ^
+
++ [[0, 1, 0, 1, 1]]
+?         ^ +++
+ : Mauvais histogramme
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.006s
+
+FAILED (failures=2, errors=1)
