@@ -47,12 +47,12 @@ def get_word_length_histogram(text):
 def format_histogram(histogram):
 	ROW_CHAR = "*" 
 	result = ""
-
+	alignment = len(str(len(histogram) - 1))
 	for i, number_ofWord in enumerate(histogram) :
 		if i == 0:
 			continue
 		else:
-			result += f"{i} {ROW_CHAR*number_ofWord}" + "\n"
+			result += f"{i : >{alignment}} {ROW_CHAR*number_ofWord}" + "\n"
 	
 	return result
 
